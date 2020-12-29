@@ -10,6 +10,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "manifest": "ng add @angular/pwa",
     "pwa": "ionic serve -l",
     "android": "ionic cordova run android --no-native-run",
     "ios": "ionic cordova run ios --no-native-run"
@@ -22,6 +23,7 @@
     "@angular/platform-browser": "~10.0.0",
     "@angular/platform-browser-dynamic": "~10.0.0",
     "@angular/router": "~10.0.0",
+    "@angular/service-worker": "~10.0.0",
     "@capacitor/core": "2.4.5",
     "@ionic-native/camera": "^5.30.0",
     "@ionic-native/core": "^5.0.0",
