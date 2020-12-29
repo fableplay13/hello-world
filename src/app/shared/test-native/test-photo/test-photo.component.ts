@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 
 @Component({
-  selector: 'app-photo',
-  templateUrl: 'photo.component.html',
-  styleUrls: ['photo.component.scss']
+  selector: 'app-test-photo',
+  templateUrl: 'test-photo.component.html',
+  styleUrls: ['test-photo.component.scss']
 })
-export class PhotoComponent implements OnInit {
+export class TestPhotoComponent implements OnInit {
   constructor(private camera: Camera) { }
   options: CameraOptions = {
     quality: 100,
