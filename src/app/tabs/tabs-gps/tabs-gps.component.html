@@ -1,9 +1,14 @@
 <ion-content>
-    <ion-grid>
-        <ion-row>
-            <ion-col size="100%">
-                <h1>Gps</h1>
-            </ion-col>
-        </ion-row>
-    </ion-grid> 
+    <ion-header>
+        <ion-toolbar color="primary">
+            <ion-title>Current Location</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <agm-map [latitude]="lat" [longitude]="lng" [zoom]="15" style="height: 100%;">
+            <agm-marker [latitude]="lat" [longitude]="lng" (markerClick)="onMarkerClick()"></agm-marker>
+        </agm-map>
+    </ion-content>
 </ion-content>
+
+

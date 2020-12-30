@@ -2,12 +2,14 @@ import { NgModule, NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA } from '@angular/cor
 import { CommonModule } from '@angular/common';
 
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     declarations: [],
     entryComponents: [],
     imports: [
-        CommonModule
+        CommonModule,
+        HttpClientModule
     ],
     providers: [
         Camera
