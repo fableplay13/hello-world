@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Plugins, CameraResultType, Capacitor, FilesystemDirectory, CameraPhoto, CameraSource } from '@capacitor/core';
+import { Plugins, CameraResultType, Capacitor, FilesystemDirectory, CameraPhoto, CameraSource, CameraDirection } from '@capacitor/core';
 import { Platform } from '@ionic/angular';
 
 const { Camera, Filesystem, Storage } = Plugins;
@@ -26,7 +26,8 @@ export class CameraService {
     const capturedPhoto = await Camera.getPhoto({
       resultType: CameraResultType.Uri, 
       source: CameraSource.Camera, 
-      quality: 100 
+      quality: 100 ,
+      direction: CameraDirection.Rear
     });
     // Save the picture and add it to photo collection
     const savedImageFile = await this.savePicture(capturedPhoto);
