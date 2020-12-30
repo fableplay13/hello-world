@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  GM_API_KEY: 'AIzaSyCINnuuJHyhAHXVzwZbbftTzICWzGmwZuE'
 };
