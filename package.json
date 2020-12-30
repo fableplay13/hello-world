@@ -1,8 +1,7 @@
 {
   "name": "hello-world",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "author": "Giacomo Rossi",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -10,6 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "prod": "ionic build --prod",
     "manifest": "ng add @angular/pwa",
     "pwa": "ionic serve -l",
     "android": "ionic cordova run android --no-native-run",
