@@ -9,9 +9,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "prod": "ionic build --prod",
     "manifest": "ng add @angular/pwa",
-    "pwa": "ionic serve -l",
+    "develop": "ionic serve -l",
+    "pwa": "ionic build --prod",
     "android": "ionic cordova run android --no-native-run",
     "ios": "ionic cordova run ios --no-native-run"
   },
