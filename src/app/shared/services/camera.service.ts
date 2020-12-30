@@ -3,11 +3,16 @@ import { Plugins, CameraResultType, Capacitor, FilesystemDirectory, CameraPhoto,
 
 const { Camera, Filesystem, Storage } = Plugins;
 
+export interface Photo {
+  filepath: string;
+  webviewPath: string;
+}
+
 @Injectable({
   providedIn: 'root'
 })
-export class PhotoService {
-  photos: any = [];
+export class CameraService {
+  public photos: Photo[] = [];
   constructor() { }
 
   public async addNewToGallery() {
@@ -20,6 +25,7 @@ export class PhotoService {
     // Save the picture and add it to photo collection
     const savedImageFile = await this.savePicture(capturedPhoto);
     this.photos.unshift(savedImageFile);
+    return this.photos;
   }
 
   private async savePicture(cameraPhoto: CameraPhoto) {

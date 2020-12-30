@@ -2,8 +2,11 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '',   redirectTo: '/', pathMatch: 'full' },
-  { path: '**', redirectTo: '/' }
+  { path: '', redirectTo: '/tabs/camera', pathMatch: 'full' },
+  {
+    path: 'tabs',
+    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+  }
 ];
 
 @NgModule({
