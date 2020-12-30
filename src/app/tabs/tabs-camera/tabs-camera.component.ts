@@ -8,7 +8,9 @@ import { CameraService } from '../../shared/services/camera.service';
 })
 export class TabsCameraComponent implements OnInit {
   constructor(public photoService: CameraService) { }
-  ngOnInit() {}
+  async ngOnInit() {
+    await this.photoService.loadSaved();
+  }
   addPhotoToGallery() {
     this.photoService.addNewToGallery();
   }
