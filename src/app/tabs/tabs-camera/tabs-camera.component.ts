@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CameraService } from '../../shared/services/camera.service';
+import { CameraService } from '../../shared/services/camera/camera.service';
 
 @Component({
   selector: 'app-tabs-camera',
