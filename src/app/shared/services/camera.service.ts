@@ -22,13 +22,15 @@ export class CameraService {
   }
 
   public async addNewToGallery() {
-    // Take a photo
-    const capturedPhoto = await Camera.getPhoto({
+
+    const options = {
       resultType: CameraResultType.Uri, 
       source: CameraSource.Camera, 
       quality: 100 ,
       direction: CameraDirection.Rear
-    });
+    }
+    // Take a photo
+    const capturedPhoto = await Camera.getPhoto(options);
     // Save the picture and add it to photo collection
     const savedImageFile = await this.savePicture(capturedPhoto);
     this.photos.unshift(savedImageFile);
