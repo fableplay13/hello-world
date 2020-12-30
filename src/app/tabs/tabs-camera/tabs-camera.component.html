@@ -1,8 +1,13 @@
 <ion-content style="position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: 1;">
     <ion-grid>
         <ion-row>
-            <ion-col size="6" *ngFor="let photo of photoService.photos; index as position">
-                <ion-img [src]="photo.webviewPath"></ion-img>
+            <ion-col size="6" *ngFor="let photo of photoService.photos; index as position; let i = index;">
+                <div>
+                    <ion-img [src]="photo.webviewPath"></ion-img>
+                    <ion-button size="small" (click)="trashPhotoFromGallery(photo, i)" style="position: absolute; bottom: 6px; left: 8px;">
+                        <ion-icon name="trash-outline"></ion-icon>
+                    </ion-button>
+                </div>
             </ion-col>
         </ion-row>
     </ion-grid>

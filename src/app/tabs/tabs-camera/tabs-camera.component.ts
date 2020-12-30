@@ -14,4 +14,7 @@ export class TabsCameraComponent implements OnInit {
   addPhotoToGallery() {
     this.photoService.addNewToGallery();
   }
+  trashPhotoFromGallery(photo: any, i: number) {
+    this.photoService.removePhotoFromGallery(photo, i);
+  }
 }
