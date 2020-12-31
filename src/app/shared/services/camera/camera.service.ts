@@ -25,8 +25,7 @@ export class CameraService {
 
     const options = {
       resultType: CameraResultType.Uri, 
-      source: CameraSource.Camera,
-      saveToGallery: true,
+      source: CameraSource.Photos,
       direction: CameraDirection.Rear,
       quality: 100
     }
