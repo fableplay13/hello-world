@@ -27,7 +27,7 @@ export class CameraService {
       resultType: CameraResultType.Uri, 
       source: CameraSource.Camera, 
       quality: 100 ,
-      direction: CameraDirection.Rear
+      direction: CameraDirection.Front
     }
     // Take a photo
     const capturedPhoto = await Camera.getPhoto(options);
