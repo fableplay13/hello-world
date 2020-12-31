@@ -29,13 +29,11 @@ export class CameraService {
       direction: CameraDirection.Rear,
       quality: 100
     }
-    setTimeout(async () => {
-      // Take a photo
-      const capturedPhoto = await Camera.getPhoto(options);
-      // Save the picture and add it to photo collection
-      const savedImageFile = await this.savePicture(capturedPhoto);
-      this.photos.unshift(savedImageFile);
-    }, 100);
+    // Take a photo
+    const capturedPhoto = await Camera.getPhoto(options);
+    // Save the picture and add it to photo collection
+    const savedImageFile = await this.savePicture(capturedPhoto);
+    this.photos.unshift(savedImageFile);
 
     Storage.set({
       key: this.PHOTO_STORAGE,
