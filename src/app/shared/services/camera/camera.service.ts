@@ -25,15 +25,17 @@ export class CameraService {
 
     const options = {
       resultType: CameraResultType.Uri, 
-      source: CameraSource.Photos,
+      source: CameraSource.Camera,
       direction: CameraDirection.Rear,
       quality: 100
     }
-    // Take a photo
-    const capturedPhoto = await Camera.getPhoto(options);
-    // Save the picture and add it to photo collection
-    const savedImageFile = await this.savePicture(capturedPhoto);
-    this.photos.unshift(savedImageFile);
+    setTimeout(async () => {
+      // Take a photo
+      const capturedPhoto = await Camera.getPhoto(options);
+      // Save the picture and add it to photo collection
+      const savedImageFile = await this.savePicture(capturedPhoto);
+      this.photos.unshift(savedImageFile);
+    }, 100);
 
     Storage.set({
       key: this.PHOTO_STORAGE,
